@@ -7,18 +7,12 @@
 apt update 
 apt-get install -y ca-certificates curl gnupg lsb-release apt-transport-https ntp git 
 
-if ! [ $USER = root ]
-then
-	echo run this script with sudo
-	exit 3
-fi
 
 # setting MYOS variable
 MYOS=$(hostnamectl | awk '/Operating/ { print $3 }')
 OSVERSION=$(hostnamectl | awk '/Operating/ { print $4 }')
 
-if [ $MYOS = "Ubuntu" ]
-then
+
 	echo "################## RUNNING UBUNTU CONFIG #############"
 	sudo swapoff -a
 	sudo sed -i 's/\/swap/#\/swap/' /etc/fstab
@@ -83,4 +77,3 @@ EOF
 	echo " Below is the command to join a new worker to the Kubernetes cluster"
 	cat join-node.txt 
 
-fi
