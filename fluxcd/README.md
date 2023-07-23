@@ -17,4 +17,16 @@ To download the binary for amd64 architecture :
 
 3. fluxcd initialization
 
-=> fluxctl install --git-email=my_email@domain.com --git-url=git@gitlab.com:xavki/testflux.git --git-path=workloads --namespace=fluxcd | kubectl apply -f -
+/!\ You should know that I use a public repository, so I don't necessarily need an ssh key to synchronize fluxcd and my git repository. So I use https
+
+=> fluxctl install --git-email=my_email@domain.com --git-url=https://github.com/erickmpene/kubernetes.git --git-path=fluxcd/my_workload --namespace=fluxcd | kubectl apply -f -
+
+/!\ if you are using a private repository and you want to switch to ssh, you will need to create an authentication key with the following command:
+
+=> fluxctl identity --k8s-fwd-ns fluxcd
+
+
+
+
+
+
