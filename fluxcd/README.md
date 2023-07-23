@@ -27,6 +27,7 @@ To download the binary for amd64 architecture :
 
 
 
+For information visit this : 
 
-
+=> https://github.com/fluxcd/flux
 
