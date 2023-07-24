@@ -47,7 +47,7 @@ scp /etc/kubernetes/pki/ca.crt myuser@my_server:~/.kube/certificate
 cd $HOME/.kube/certificate
 ```
 ```sh
-kubectl config set-credentials toto --client-certificate=~$HOME/.kube/certificate/toto.crt --client-key=$HOME/.kube/certificate/toto.key
+kubectl config set-credentials toto --client-certificate=$HOME/.kube/certificate/toto.crt --client-key=$HOME/.kube/certificate/toto.key
 ```
 ```sh
 kubectl config get-contexts
