@@ -56,7 +56,7 @@ kubectl config get-contexts
 kubectl config set-context toto-kubernetes --cluster=kubernetes  --user=toto --namespace=default
 ```
 ```sh
-Kubectl config view
+kubectl config view
 kubectl config set-context --current --namespace=default
 kubectl config use-context  toto-kubernetes
 ```

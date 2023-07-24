@@ -4,8 +4,8 @@ metadata:
   name: RB-RWD
   namespace: default 
 subjects:
-- kind: User
-  name: toto
+- kind: Group
+  name: operation
   apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: Role
