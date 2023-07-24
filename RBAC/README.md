@@ -44,10 +44,10 @@ scp /etc/kubernetes/pki/ca.crt myuser@my_server:~/.kube/certificate
 
 ### 5. Setting up User configs with kubectl
 ```sh
-cd ~/.kube
+cd $HOME/.kube/certificate
 ```
 ```sh
-kubectl config set-credentials toto --client-certificate=~/.kube/certificate/toto.crt --client-key=~/.kube/certificate/toto.key
+kubectl config set-credentials toto --client-certificate=~$HOME/.kube/certificate/toto.crt --client-key=$HOME/.kube/certificate/toto.key
 ```
 ```sh
 kubectl config get-contexts
@@ -62,7 +62,7 @@ kubectl config use-context  toto-kubernetes
 ```
 Here we will provide the correct ip address of the master node
 ```sh 
-kubectl config set-cluster kubernetes --server=https://master-node:6443 --certificate-authority=~/.kube/certificate/ca.crt
+kubectl config set-cluster kubernetes --server=https://master-node:6443 --certificate-authority=$HOME/.kube/certificate/ca.crt
 ``` 
 
 ### _!!! Everything is ready on the certificate side. All that remains is to create and grant rights to the new user on the master node. Please use yaml files for entitlement creation. You can adapt the rights according to your situation_
