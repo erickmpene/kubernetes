@@ -31,7 +31,7 @@ scp toto.csr myuser@master-node:/tmp
 ```
 ### 4. On the master node
 ```sh
-sudo openssl x509 -req -CA /etc/kubernetes/pki/ca.crt -CAkey /etc/kubernetes/pki/ca.key -CAcreateserial -days 730 -in /tmp/toto.csr -out toto.crt                                         
+sudo openssl x509 -req -CA /etc/kubernetes/pki/ca.crt -CAkey /etc/kubernetes/pki/ca.key -CAcreateserial -days 730 -in /tmp/toto.csr -out toto.crt
 ```
 At this point, you will have the toto.crt file. 
 You need to copy the ```toto.crt ``` file you just generated and the ```/etc/kubernetes/pki/ca.crt``` file to the server where you generated the certificates.
