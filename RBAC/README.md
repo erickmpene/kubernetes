@@ -58,6 +58,7 @@ kubectl config set-context toto-kubernetes --cluster=kubernetes  --user=toto --n
 ```sh
 Kubectl config view
 kubectl config set-context --current --namespace=default
+kubectl config use-context  toto-kubernetes
 ```
 Here we will provide the correct ip address of the master node
 ```sh 
