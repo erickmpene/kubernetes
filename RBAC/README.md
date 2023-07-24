@@ -64,6 +64,6 @@ Here we will provide the correct ip address of the master node
 kubectl config set-cluster kubernetes --server=https://master-node:6443 --certificate-authority=~/.kube/certificate/ca.crt
 ``` 
 
-### _Everything is ready on the certificate side. All that remains is to create and grant rights to the new user on the master node. Please use yaml files for entitlement creation. You can adapt the rights according to your situation_
+### _ !!! Everything is ready on the certificate side. All that remains is to create and grant rights to the new user on the master node. Please use yaml files for entitlement creation. You can adapt the rights according to your situation_
 
 
