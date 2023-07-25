@@ -66,7 +66,7 @@ sudo systemctl enable kubelet
 	kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.26.0/manifests/custom-resources.yaml
 	kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.26.0/manifests/calico.yaml
 
-	Kubectl get nodes 
+	kubectl get nodes 
 
 	echo "############### TOKEN TO JOIN A NEW WORKER IN THE CLUSTER  ##############"
 	kubeadm token create --print-join-command > join-node.txt
