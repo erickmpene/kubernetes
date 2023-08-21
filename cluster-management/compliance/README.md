@@ -32,7 +32,6 @@ choose your file or directory and run :
 ```sh
 polaris audit --audit-path MyFile.yaml
 ```
-
 #### Polaris Exit Codes for Audit Runs
 
 > Exit 0
