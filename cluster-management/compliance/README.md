@@ -7,7 +7,7 @@ chmod 700 get_helm.sh
 ./get_helm.sh
 ```
 
-#### 2. Install Helm
+#### 2. Install Polaris Dashboard
 ```sh
 helm repo add fairwinds-stable https://charts.fairwinds.com/stable
 helm upgrade --install polaris fairwinds-stable/polaris --namespace polaris --create-namespace
