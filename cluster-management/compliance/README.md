@@ -1,5 +1,7 @@
 #### DEPLOY POLARIS with Helm
 
+Polaris website for more information --> [Polaris](https://polaris.docs.fairwinds.com)
+
 #### 1. Install helm on linux 
 ```sh
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
