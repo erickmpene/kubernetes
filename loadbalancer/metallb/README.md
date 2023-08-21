@@ -1,4 +1,4 @@
-#### Installl order
+#### Install order
 
 > 1. metallb-native.yaml
 > 2. ipaddresspool.yml
