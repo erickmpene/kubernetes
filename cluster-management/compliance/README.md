@@ -17,3 +17,10 @@ helm upgrade --install polaris fairwinds-stable/polaris --namespace polaris --cr
 ```sh
 kubectl apply -f ingress.yaml 
 ```
+
+#### 4. install Polaris CLI
+```sh
+wget https://github.com/FairwindsOps/polaris/releases/download/8.4.0/polaris_linux_amd64.tar.gz
+tar -zxvf polaris_linux_amd64.tar.gz
+mv polaris /usr/bin
+```
