@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-polaris
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: polaris.notylus.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: polaris-dashboard
+            port:
+              number: 80
