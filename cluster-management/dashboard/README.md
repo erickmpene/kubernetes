@@ -26,3 +26,8 @@ kubectl get secret myuser-secret -n kubernetes-dashboard  -o jsonpath="{.data.to
 
 #### 6. Dashboard access
 
+##### 6.1 Without change, by default, the dashboard is only accessible in https://localhost:8001
+
+```sh
+kubectl proxy 
+```
