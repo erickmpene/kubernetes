@@ -34,8 +34,9 @@ polaris audit --audit-path MyFile.yaml
 ```
 #### Polaris Exit Codes for Audit Runs
 
-Exit 0
-    - Successful exit code
+| Code | Means |
+| ---- | ----- |
+|Exit 0|Successful exit code|
 Exit 1
     - Could not run audit, or application had a failure wwhile running
 Exit 2
