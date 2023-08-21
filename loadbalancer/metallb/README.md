@@ -1,23 +1,31 @@
------------------------------------------------------------
-Network addon     	Compatible
+#### Installl order
 
-Antrea         ----> 	Yes (Tested on version 1.4 and 1.5)
+> 1. metallb-native.yaml
+> 2. ipaddresspool.yml
+> 3. deploy.yaml 
 
-Calico         ---->	Mostly (see known issues)
+#### Compatibility
 
-Canal 	       ---->	Yes
+| Network addon | Compatible |
+|---------------|------------|
 
-Cilium 	       ---->	Yes
+|Antrea  | Yes (Tested on version 1.4 and 1.5)|
 
-Flannel        ---->	Yes
+|Calico | Mostly (see known issues)|
 
-Kube-ovn       ---->	Yes
+|Canal 	| Yes|
 
-Kube-router    ---->	Mostly (see known issues)
+|Cilium | Yes|
 
-Weave Net      ---->	Mostly (see known issues)
+|Flannel | Yes|
 
------------------------------------------------------------
+|Kube-ovn | Yes|
+
+|Kube-router | Mostly (see known issues)|
+
+|Weave Net | Mostly (see known issues)|
+
+
 
 
 kubectl get svc -n ingress-nginx -o wide 
