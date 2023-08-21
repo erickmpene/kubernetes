@@ -34,13 +34,13 @@ polaris audit --audit-path MyFile.yaml
 ```
 #### Polaris Exit Codes for Audit Runs
 
-> Exit 0
+Exit 0
     - Successful exit code
-> Exit 1
+Exit 1
     - Could not run audit, or application had a failure wwhile running
-> Exit 2
+Exit 2
     - Unused
-> Exit 3
+Exit 3
     - Exiting due to '--set-exit-code-on-danger' being set and at least one danger was found after an audit
-> Edit 4
+Edit 4
     - Exiting due to '--set-exit-code-below-score' being set and the audit resulted in a score less than the minimum score value.
