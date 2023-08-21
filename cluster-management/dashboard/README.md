@@ -2,7 +2,6 @@
 ```sh
 kubectl apply -f dashboard.yaml
 ```
-
 #### 2. apply the dashboard.yaml file
 ```sh
 kubectl apply -f service-account.yaml
@@ -12,7 +11,6 @@ kubectl apply -f service-account.yaml
 ```sh
 kubectl apply -f clusterRoleBinding.yaml
 ```
-
 
 #### 4. apply the dashboard.yaml file
 ```sh
