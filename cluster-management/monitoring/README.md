@@ -22,3 +22,6 @@ helm install [RELEASE_NAME] prometheus-community/kube-prometheus-stack
 ```sh
 kubectl apply -f ingress.yaml
 ```
+Default :
+user: admin
+password : prom-operator
