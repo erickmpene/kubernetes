@@ -25,5 +25,5 @@ kubectl apply -f ingress.yaml
 Default :
 - user: admin
 - password : prom-operator 
-  ##### this value can change in the future. Visit this github for more information [GIHUB-values.yaml](https://github.com/prometheus-community/helm-charts/blob/main/charts/kube-prometheus-stack/values.yaml) and search for "adminPassword"
+  ##### `This value can change in the future. Visit this github for more information [GIHUB-values.yaml](https://github.com/prometheus-community/helm-charts/blob/main/charts/kube-prometheus-stack/values.yaml) and search for "adminPassword"`
 
