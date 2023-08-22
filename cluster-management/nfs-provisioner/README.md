@@ -39,9 +39,3 @@ helm install -n nfs-provisioning --create-namespace nfs-subdir-external-provisio
 kubectl get storageclass
 ```
 
-
-kubectl create ns nfs-provisioning
-
-```sh
-yum install nfs-utils nfs-utils-lib
-```
