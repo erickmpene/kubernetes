@@ -29,16 +29,18 @@ yum install nfs-utils nfs-utils-lib
 
 ##### 2. Install and Configure NFS Client Provisioner (Master-node)
 ```sh
+kubectl create ns nfs-provisioning
 helm repo add nfs-subdir-external-provisioner https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner
 helm repo update
 helm install -n nfs-provisioning --create-namespace nfs-subdir-external-provisioner nfs-subdir-external-provisioner/nfs-subdir-external-provisioner --set nfs.server=192.168.1.139 --set nfs.path=/opt/dynamic-storage
-
-
+```
+##### 3. run the following command to retrieve the storage class
+```sh
+kubectl get storageclass
 ```
 
 
-
-kubectl create ns storage
+kubectl create ns nfs-provisioning
 
 ```sh
 yum install nfs-utils nfs-utils-lib
