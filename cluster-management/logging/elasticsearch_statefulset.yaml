@@ -71,6 +71,7 @@ spec:
         app: elasticsearch
     spec:
       accessModes: [ "ReadWriteOnce" ]
+      storageClassName: nfs-client
       resources:
         requests:
-          storage: 5Gi
+          storage: 20Gi
