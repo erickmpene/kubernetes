@@ -19,3 +19,6 @@ helm repo update
 helm install [RELEASE_NAME] prometheus-community/kube-prometheus-stack
 ```
 ##### 4. Deploy ingress for grafana dashboard
+```sh
+kubectl apply -f ingress.yaml
+```
