@@ -24,3 +24,4 @@ kubectl top nodes --sort-by=memory
 kubectl top pods --sort-by=memory
 ```
 
+#### Enjoy ! d(-_-)b
