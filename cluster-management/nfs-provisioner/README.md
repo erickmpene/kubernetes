@@ -38,12 +38,6 @@ helm install -n nfs-provisioning --create-namespace nfs-subdir-external-provisio
 
 
 
-
-
-helm install -n storage --create-namespace nfs-subdir-external-provisioner nfs-subdir-external-provisioner/nfs-subdir-external-provisioner --set nfs.server=192.168.1.219 --set nfs.path=/data/CKA/kibana
-
-
-
 kubectl create ns storage
 
 ```sh
