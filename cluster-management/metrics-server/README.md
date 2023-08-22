@@ -20,7 +20,7 @@ kubectl delete pod metrics-server-xxxxxxxxx-yyyyyy
 ```
 ##### 4. wait a moment and test 
 ```sh
-kubectl top nodes
-kubectl top pods
+kubectl top nodes --sort-by=memory
+kubectl top pods --sort-by=memory
 ```
 
