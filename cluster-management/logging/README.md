@@ -4,7 +4,8 @@ This code is based on the great [digital ocean tutorial](https://www.digitalocea
 
 ##### 1. Namespace
 ```sh
-kubectl create -f kube-logging.yaml
+kubectl create -f logging.yaml
+kubectl config set-context --current --namespace=logging
 ```
 ##### 2. ElasticSearch
 ```sh
