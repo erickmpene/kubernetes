@@ -13,7 +13,9 @@ kubectl config set-context --current --namespace=monitoring
 ``` 
 ##### 3. Install prometheus via helm
 ```sh
+chmod 600 ~/.kube/config # only if you have a warning like "Kubernetes configuration file is group-readable. This is insecure ..."
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm repo update
+helm install [RELEASE_NAME] prometheus-community/kube-prometheus-stack
 ```
-
+##### 4. Deploy ingress for grafana dashboard
