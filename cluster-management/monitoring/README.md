@@ -1,6 +1,6 @@
-#### We will use Prometheus and Grafana
+# We will use Kube-Prometheus-stack
 
-/!\ ````I guess you already have helm installed on your server```` 
+/!\ `I guess you already have helm installed on your server` 
 
 ##### 1. Update Helm repo 
 ```sh
@@ -23,5 +23,5 @@ helm install [RELEASE_NAME] prometheus-community/kube-prometheus-stack
 kubectl apply -f ingress.yaml
 ```
 Default :
-user: admin
-password : prom-operator
+- user: admin
+- password : prom-operator
