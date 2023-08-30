@@ -1,4 +1,4 @@
-# I explain here how to create an authentication certificate on a Kubernetes cluster
+# I explain here how to create an authentication certificate and create and configure a service account on a Kubernetes cluster
 ---
 ### _Some guidelines_
 > My_UserName = toto
