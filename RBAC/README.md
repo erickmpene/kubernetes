@@ -67,4 +67,27 @@ kubectl config set-cluster kubernetes --server=https://master-node:6443 --certif
 
 ### _!!! Everything is ready on the certificate side. All that remains is to create and grant rights to the new user on the master node. Please use yaml files for entitlement creation. You can adapt the rights according to your situation_
 
+## SERVICE ACCOUNT
+##### In this example, I created a service account that will have the right to list all persistent volumes in my Kubernetes cluster
+
+### 1. Create service account
+```sh
+kubectl apply -f create-service-account.yaml
+```
+### 2. Create Cluster Role
+```sh
+kubectl apply -f clusterRole.yaml
+```
+### 3. Create Cluster Role Binding
+```sh
+kubectl apply -f clusterRoleBinding.yaml
+```
+### 4. We check if we have correctly configured the rights for the service account
+```sh
+kubectl auth can-i list PersistentVolumes --as system:serviceaccount:default:pvviewer
+```
+#### _If it's okay, you will get the return "YES"_
+
+
+
 
