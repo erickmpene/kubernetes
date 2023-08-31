@@ -41,11 +41,12 @@ ETCDCTL_API=3 etcdctl --endpoints=https://127.0.0.1:2379 --cacert=<trusted-ca-fi
 ```sh
 kubectl describe pods etcd-master -n kube-system
 ```
-> endpoints => advertise-client-urls
+> --endpoints => advertise-client-urls
 > 
-> cacert => trusted-ca-file
+> --cacert => trusted-ca-file
 > 
-> cert => cert-file
-> key => key-file
+> --cert => cert-file
+> 
+> --key => key-file
 
 
