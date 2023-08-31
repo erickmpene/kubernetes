@@ -48,5 +48,21 @@ kubectl describe pods etcd-master -n kube-system
 > --cert => cert-file
 > 
 > --key => key-file
+>
 
+If you substitute the values, your command should look like this :
+```sh
+ETCDCTL_API=3 etcdctl --endpoints=https://127.0.0.1:2379 --cacert=/etc/kubernetes/pki/etcd/ca.crt --cert=/etc/kubernetes/pki/etcd/server.crt --key=/etc/kubernetes/pki/etcd/server.key  snapshot save my-etcd-backup
+```
 
+#### 5. to check your backup
+```sh
+ETCDCTL_API=3 etcdctl --write-out=table snapshot status my-etcd-backup
+```
+
+#### 6. To restore your etcd's backup
+```sh
+ETCDCTL_API=3 etcdctl --data-dir="/var/lib/etcd" snapshot restore my-etcd-backup
+``` 
+
+### Enjoy !
