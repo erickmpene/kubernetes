@@ -1,4 +1,4 @@
-### How to baackup etcd
+### How to backup etcd
 ##### To make a backup of ETCD, you must absolutely install "etcdctl"
 #### 1. you need to find the version of etcd installed on the Kubernetes cluster
 I assume your master-node name is "master"
@@ -32,14 +32,18 @@ ln -s /tmp/etcd-download-test/etcdctl /usr/bin/etcdctl
 ```sh
 etcdctl version
 ``` 
+#### 4. Backup etcd
+The Kubernetes documentation gives us this command where you have to replace with the values ​​specific to your cluster
+```sh
+ETCDCTL_API=3 etcdctl --endpoints=https://127.0.0.1:2379 --cacert=<trusted-ca-file> --cert=<cert-file> --key=<key-file> snapshot save <backup-file-location>
+```
+> First, you need to find some value in the etcd's pod
+```sh
+kubectl describe pods etcd-master -n kube-system
+```
+> --endpoints => advertise-client-urls
+> --cacert => trusted-ca-file
+> --cert => cert-file
+> --key => key-file
 
 
-
-
-
-kubectl describe pods etcd-master -n kube-system 
-
-
-Les scripts permet de faire la sauvegarde et la restauration du ETCD d'un cluster Kubernetes
-
-1. IL FAUT OBLIGATOIREMENT AVOIR ETCDCTL
