@@ -65,3 +65,4 @@ argocd cluster add kubernetes-admin@kubernetes
 > INFO[0009] ClusterRoleBinding "argocd-manager-role-binding" created
 
 > INFO[0014] Created bearer token secret for ServiceAccount "argocd-manager"
+
