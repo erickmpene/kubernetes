@@ -34,11 +34,12 @@ argocd account update-password
 kubectl get service -n argocd
 ```
 
-> In my case de IP address of my service is 10.109.50.122 
+> In my case de IP address (ClusterIP) of my service is 10.109.50.122 
 
 ```sh
 argocd login 10.109.50.122
 ```
+Question : "WARNING: server certificate had error: tls: failed to verify certificate: x509: cannot validate certificate for 10.109.50.122 because it doesn't contain any IP SANs. Proceed insecurely (y/n)? Y "
 Username: admin
 Password: # enter the password that you recovered in point 4
 
@@ -47,7 +48,20 @@ _Context '10.109.50.122' updated_
 
 
 #### 7. Add new Cluster to ArgoCD
-On command line :
+> First run this command to know the name of your Kubernetes's Cluster
 ```sh
-
+kubectl config get-contexts -o name
 ```
+In my case => kubernetes-admin@kubernetes
+> Second, run this command and accept the Warning : 
+```sh
+argocd cluster add kubernetes-admin@kubernetes
+```
+
+> INFO[0009] ServiceAccount "argocd-manager" created in namespace "kube-system"
+
+> INFO[0009] ClusterRole "argocd-manager-role" created
+
+> INFO[0009] ClusterRoleBinding "argocd-manager-role-binding" created
+
+> INFO[0014] Created bearer token secret for ServiceAccount "argocd-manager"
