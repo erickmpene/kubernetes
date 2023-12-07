@@ -10,7 +10,7 @@ kubectl get nodes
 ##### 2.1 Debian :
 To see available version 
 ```sh
-apt show kubectl -a | grep 1.26
+apt show kubectl -a | grep 1.26 # this is an exemple
 ```
 ```sh
 apt update 
@@ -26,11 +26,11 @@ sudo systemctl restart kubelet
 ##### 2.2 CentOS
 To see available version 
 ```sh
-yum list --showduplicates kubeadm 
+yum list --showduplicates kubeadm | grep 1.26  # this is an exemple
 ```
 ```sh
 yum update
-KUBE_VERSION=1.25.1-00  # this is an exemple
+KUBE_VERSION=1.26.1-00  # this is an exemple
 yum install -y kubelet-$KUBE_VERSION kubectl-$KUBE_VERSION --disableexcludes=kubernetes
 sudo systemctl daemon-reload
 sudo systemctl restart kubelet
