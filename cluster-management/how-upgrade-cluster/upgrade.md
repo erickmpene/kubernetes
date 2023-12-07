@@ -26,12 +26,13 @@ sudo systemctl restart kubelet
 ##### 2.2 CentOS
 To see available version 
 ```sh
-yum list --showduplicates kubeadm | grep 1.26  # this is an exemple
+yum list --showduplicates kubeadm | grep 1.27  # this is an exemple
 ```
 ```sh
 yum update
 KUBE_VERSION=1.26.1-00  # this is an exemple
-yum install -y kubelet-$KUBE_VERSION kubectl-$KUBE_VERSION --disableexcludes=kubernetes
+yum install kubeadm-$KUBE_VERSION -y 
+yum install -y kubelet-$KUBE_VERSION kubectl-$KUBE_VERSION 
 sudo systemctl daemon-reload
 sudo systemctl restart kubelet
 ```
