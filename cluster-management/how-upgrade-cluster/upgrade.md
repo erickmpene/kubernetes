@@ -8,18 +8,26 @@ kubectl get nodes
 #### 2. Go to the node-worker and choose your version
 
 ##### 2.1 Debian :
+To see available version 
+```sh
+apt show kubectl -a | grep 1.26
+```
 ```sh
 apt update 
 KUBE_VERSION=1.26.1-00  # this is an exemple
-apt-get install -y kubeadm=$KUBE_VERSION
+apt-get install kubeadm=$KUBE_VERSION -y 
 apt-mark hold kubeadm
-apt-get install -y kubelet=$KUBE_VERSION kubectl=$KUBE_VERSION
+apt-get install kubelet=$KUBE_VERSION kubectl=$KUBE_VERSION -y 
 apt-mark hold kubelet kubectl
 sudo systemctl daemon-reload
 sudo systemctl restart kubelet
 ```
 
 ##### 2.2 CentOS
+To see available version 
+```sh
+yum list --showduplicates kubeadm 
+```
 ```sh
 yum update
 KUBE_VERSION=1.25.1-00  # this is an exemple
